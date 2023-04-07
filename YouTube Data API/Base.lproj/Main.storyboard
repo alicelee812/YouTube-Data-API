@@ -1,24 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LwV-iw-pEn">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="YouTube_Data_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pasta" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-f3-a26">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Km-CO-EXB">
+                                <rect key="frame" x="16" y="356" width="135" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="9">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" systemColor="systemYellowColor"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Happy Eating!">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="MarkerFelt-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="3" trailing="0.0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="A83-tx-EXt" kind="show" id="orO-qv-U9u"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xnw-f3-a26" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gcr-h6-tCY"/>
+                            <constraint firstItem="xnw-f3-a26" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HGZ-T2-Ly8"/>
+                            <constraint firstAttribute="bottom" secondItem="xnw-f3-a26" secondAttribute="bottom" id="nSp-Um-OhR"/>
+                            <constraint firstItem="xnw-f3-a26" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qb9-dq-X6X"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F4O-Y3-99w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4786.1538461538457" y="-28.436018957345969"/>
+        </scene>
+        <!--James Table View Controller-->
+        <scene sceneID="oeZ-6s-2ye">
+            <objects>
+                <tableViewController id="A83-tx-EXt" customClass="JamesTableViewController" customModule="YouTube_Data_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="grP-Aa-R6M">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Np2-Tg-TUB">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="" image="video.bubble.left.fill" catalog="system"/>
+                                <segment title="" image="heart.rectangle.fill" catalog="system"/>
+                            </segments>
+                            <connections>
+                                <action selector="changeSegmentedControl:" destination="A83-tx-EXt" eventType="valueChanged" id="edC-VH-64Q"/>
+                            </connections>
+                        </segmentedControl>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JamesTableViewCell" rowHeight="289" id="FzP-7v-EOl" customClass="JamesTableViewCell" customModule="YouTube_Data_API" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="82" width="390" height="289"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FzP-7v-EOl" id="MIo-ND-3CF">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="289"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Own-iQ-gqT">
+                                            <rect key="frame" x="5" y="11" width="341" height="201"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKY-IH-9wi">
+                                            <rect key="frame" x="343" y="98" width="51" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" red="0.99179749838029496" green="0.81171084608753874" blue="0.1518048151686508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                            <connections>
+                                                <action selector="likeAction:" destination="A83-tx-EXt" eventType="touchUpInside" id="ACK-XK-WpL"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eoz-55-DE8">
+                                            <rect key="frame" x="5" y="220" width="385" height="69"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="likeButton" destination="XKY-IH-9wi" id="ue4-cp-ggq"/>
+                                    <outlet property="thumbnailImageView" destination="Own-iQ-gqT" id="eog-IZ-MeH"/>
+                                    <outlet property="titleLabel" destination="Eoz-55-DE8" id="IFy-bG-qQn"/>
+                                    <segue destination="R0A-Kn-40b" kind="show" identifier="" id="lXx-DS-2jD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A83-tx-EXt" id="sIF-1K-Qfb"/>
+                            <outlet property="delegate" destination="A83-tx-EXt" id="q9u-Ly-QMU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5Vt-SP-y4p">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="KIr-dJ-CHr">
+                            <rect key="frame" x="195" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Np2-Tg-TUB" id="edM-ZV-I1e"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pr5-pc-e8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5540" y="-28"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="vte-MO-QUi">
+            <objects>
+                <viewController id="R0A-Kn-40b" customClass="VideoViewController" customModule="YouTube_Data_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZK-Vi-gZv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bam-t5-a2c">
+                                <rect key="frame" x="0.0" y="100" width="390" height="744"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nTo-5g-KzE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bam-t5-a2c" firstAttribute="trailing" secondItem="nTo-5g-KzE" secondAttribute="trailing" id="35e-db-WvG"/>
+                            <constraint firstItem="bam-t5-a2c" firstAttribute="top" secondItem="aZK-Vi-gZv" secondAttribute="top" constant="100" id="5An-Xg-MXx"/>
+                            <constraint firstAttribute="bottom" secondItem="bam-t5-a2c" secondAttribute="bottom" id="859-zU-FaK"/>
+                            <constraint firstItem="bam-t5-a2c" firstAttribute="leading" secondItem="nTo-5g-KzE" secondAttribute="leading" id="eVp-12-GH6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Ns-7f-yyC"/>
+                    <connections>
+                        <outlet property="JamesWebView" destination="bam-t5-a2c" id="2En-mQ-C7P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qQ-ui-tTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6283" y="-28"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v4p-ER-PCy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwV-iw-pEn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HOd-bt-cg9">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fSU-yz-jI5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1I-iC-lFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4043" y="-28"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pasta" width="640" height="960"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="video.bubble.left.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
