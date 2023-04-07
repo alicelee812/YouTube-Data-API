@@ -50,7 +50,7 @@ class JamesTableViewController: UITableViewController {
                             let video = Video(thumbnailUrl: item.snippet.thumbnails.standard.url , title: item.snippet.title, videoID: item.snippet.resourceId.videoId)
                             newvideos += [video]
                         }
-                        //因為completionHandler將在function dataTask執行過後一段時間才執行，所以ul4ur8
+                        //因為completionHandler將在function dataTask執行過後一段時間才執行，所以要加self
                         self.allVideos = newvideos
                         //需在main thread執行UI相關的程式
                         DispatchQueue.main.async {
